@@ -13,3 +13,5 @@ void goToSleep(SleepMode mode);
 void disableAllPeripheralClocks();
 
 void setGPIOModeToAllPins(gpio_pin_mode mode);
+
+void switchToPLLwithHSE(rcc_pll_multiplier pllMultiplier);
