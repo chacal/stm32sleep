@@ -1,4 +1,4 @@
-# STM32sleep
+# STM32Sleep
 Helper library for using Stop &amp; Standby modes with [STM32duino](https://github.com/rogerclarkmelbourne/Arduino_STM32) 
 on STM32F103Cx microcontrollers.
 
