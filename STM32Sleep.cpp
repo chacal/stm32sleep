@@ -20,6 +20,7 @@ void goToSleep(SleepMode mode) {
 
     if (mode == STANDBY) {
       PWR_BASE->CR |= PWR_CR_PDDS;
+      PWR_BASE->CSR |= PWR_CSR_EWUP;
     }
 
     PWR_BASE->CR |= PWR_CR_LPDS;
@@ -27,7 +28,7 @@ void goToSleep(SleepMode mode) {
     SCB_BASE->SCR |= SCB_SCR_SLEEPDEEP;
 
     // Now go into stop mode, wake up on interrupt
-    asm("    wfi");  
+    asm("    wfi");
 }
 
 void disableAllPeripheralClocks() {
