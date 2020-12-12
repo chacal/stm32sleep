@@ -62,6 +62,21 @@ The following sketch disables ADC & GPIO's to save power before entering stop mo
       sleepAndWakeUp(STOP, &rt, alarmDelay);
     }
 
+## Standby mode with WKUP/Interrupt as exit mode
+Inital setup before enter standby mode that WKUP pin PA0 is set to LOW. 
+To exit or wakeup from standby mode give the PA0 logic HIGH.
+
+    #include <STM32Sleep.h>
+
+    void setup() {
+
+      // We have just started or woken up from sleep! System clock is set to 72MHz HSE.
+      delay(1000);
+      goToSleep(STANDBY);
+    }
+    
+    void loop() { }  // This is never run
+
 #Misc
 
 Thanks for the hard work & inspiration for all the people working on STM32duino!
