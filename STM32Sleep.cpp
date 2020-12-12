@@ -95,5 +95,5 @@ void switchToPLLwithHSE(rcc_pll_multiplier pllMultiplier) {
   rcc_switch_sysclk(RCC_CLKSRC_HSI);
   rcc_turn_off_clk(RCC_CLK_HSE);
   rcc_turn_off_clk(RCC_CLK_PLL);
-  rcc_clk_init(RCC_CLKSRC_PLL, RCC_PLLSRC_HSE, RCC_PLLMUL_2);
+  rcc_clk_init(RCC_CLKSRC_PLL, RCC_PLLSRC_HSE, pllMultiplier);
 }
